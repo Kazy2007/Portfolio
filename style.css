@@ -1,0 +1,92 @@
+:root{
+    --color-bg: #0d1117; /*背景色*/
+    --color-surface: #161b22; /*カードの中、コードカード、サムネイルの仮置き*/
+    --color-border: #30363d; /*カード・ボタンの枠線*/
+    --color-divider: #21262d; /*セクションの区切り線、ヘッダーの下の線*/
+    --color-heading: #f0f6fc; /*見出し、名前、カードのタイトル*/
+    --color-text: #c9d1d9; /*本文*/
+    --color-muted: #8b949e; /*日付、補足、ナビの通常時*/
+    --color-faint: #6e7681; /*フッターのコピーライト*/
+    --color-accent: #34d399; /*エメラルド。ボタン、リンク、セクション番号、カテゴリ名*/
+    --color-accent-text: #04241a; /*エメラルドの上の文字*/
+    --color-accent-bg: #123828; /*アクセントを薄く敷く背景（サムネイルなど）*/
+    --color-warning: #fbbf24; /*Skillsの「学習中」*/
+
+    --font-jp: "Noto Sans JP", sans-serif;
+
+    --content-width: 1120px;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* --------------------------------ここまではタグ名-------------------------------------
+-----------------------------------ここからクラス名---------------------------------- */
+
+
+.header{
+    position: sticky;
+    border-bottom: 1px solid var(--color-divider);
+    top: 0;
+    z-index: 10;
+    /* display: flex; */
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60x;
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: calc(var(--content-width) + 48px);
+}
+
+.header-logo{
+    color: var(--color-heading);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.header-list{
+    display: flex;
+    gap: 20px;
+}
+
+.header-links{
+    color: var(--color-muted);
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.header-links:hover{
+    color: var(--color-heading);
+}
+
+.header-links--active{
+    color: var(--color-accent);
+}
+
+
+@media screen and (min-width: 768px){
+    .header-inner{
+        height: 72px;
+    }
+
+    .header-logo{
+        font-size: 22px;
+    }
+
+    .header-list{
+        gap: 40px;
+    }
+
+    .header-links{
+        font-size: 15px;
+    }
+}
